@@ -2,7 +2,11 @@
 
 > A boilerplate to get started quickly with Anthology.scss. Fork it and grow it with your brand!
 
-[📚 Anthology documentation.](https://www.anthology.style)
+<p align="center">
+  <a href="https://www.anthology.style">📚 Anthology documentation</a>
+</p>
+
+---
 
 ## Usage
 
