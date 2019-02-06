@@ -1,0 +1,17 @@
+{
+  "name": "@anthology/starter-kit",
+  "version": "0.1.0",
+  "description": "A boilerplate to get started quickly with Anthology.scss. Fork it and grow it with your brand!",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RadarTech/anthology-starter-kit.git"
+  },
+  "author": "Ian K Smith <ian.smith@radar.tech>",
+  "bugs": {
+    "url": "https://github.com/RadarTech/anthology-starter-kit/issues"
+  },
+  "homepage": "https://github.com/RadarRelay/radar-anthology#readme",
+  "peerDependencies": {
+    "anthology.scss": "0.7.4"
+  }
+}

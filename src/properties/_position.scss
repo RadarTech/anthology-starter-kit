@@ -1,0 +1,9 @@
+$position-adjectives: (
+  'relative': relative,
+  'absolute': absolute,
+  'fixed': fixed,
+  'static': static,
+  'sticky': sticky,
+);
+
+@include A(define, 'position', position, $position-adjectives);

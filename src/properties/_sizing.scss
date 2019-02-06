@@ -1,0 +1,20 @@
+$height-width-adjectives: (
+  '100vh': 100vh,
+  '50vh': 50vh,
+  '100vw': 100vw,
+  '50vw': 50vw,
+);
+
+@for $i from 0 through 100 {
+  @if $i % 5 == 0 {
+    $height-width-adjectives: A(map-set, $height-width-adjectives, $i, $i * 1%);
+  }
+}
+
+@include A(define, 'height', height, $height-width-adjectives);
+@include A(define, 'minHeight', min-height, $height-width-adjectives);
+@include A(define, 'maxHeight', max-height, $height-width-adjectives);
+
+@include A(define, 'width', width, $height-width-adjectives);
+@include A(define, 'minWidth', min-width, $height-width-adjectives);
+@include A(define, 'maxWidth', max-width, $height-width-adjectives);

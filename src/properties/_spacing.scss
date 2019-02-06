@@ -1,0 +1,22 @@
+$spacing-adjectives: (
+  '0': 0,
+  'sm': px-to-rem(4px),
+  'md': px-to-rem(8px),
+  'lg': px-to-rem(12px),
+  'xl': px-to-rem(20px),
+  'xxl': px-to-rem(30px),
+);
+
+// Paddings
+@include A(define, 'padding', padding, $spacing-adjectives);
+@include A(define, 'paddingTop', padding-top, $spacing-adjectives);
+@include A(define, 'paddingRight', padding-right, $spacing-adjectives);
+@include A(define, 'paddingBottom', padding-bottom, $spacing-adjectives);
+@include A(define, 'paddingLeft', padding-left, $spacing-adjectives);
+
+// Margins
+@include A(define, 'margin', margin, $spacing-adjectives);
+@include A(define, 'marginTop', margin-top, $spacing-adjectives);
+@include A(define, 'marginRight', margin-right, $spacing-adjectives);
+@include A(define, 'marginBottom', margin-bottom, $spacing-adjectives);
+@include A(define, 'marginLeft', margin-left, $spacing-adjectives);

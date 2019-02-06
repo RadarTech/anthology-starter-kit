@@ -1,0 +1,78 @@
+// Standard color property options
+$color-options: (
+  'themes': 'night',
+  'pseudos': (':hover', ':focus', ':active', ':before', ':after'),
+  'responsive': false, // Responsiveness generates a lot of extra CSS and is overkill for colors...
+);
+
+// Default alpha channel values
+:root {
+  --color-alpha: 1;
+  --background-color-alpha: 1;
+  --border-color-alpha: 1;
+  --fill-alpha: 1;
+  --stroke-alpha: 1;
+}
+
+// Create alpha adjectives
+$color-alpha-adjectives: (
+  'full': 1,
+  'mid': 0.5,
+  'low': 0.35,
+  '0': 0,
+);
+@include A(define, 'colorAlpha', --color-alpha, $color-alpha-adjectives, $color-options);
+@include A(define, 'backgroundColorAlpha', --background-color-alpha, $color-alpha-adjectives, $color-options);
+@include A(define, 'borderColorAlpha', --border-color-alpha, $color-alpha-adjectives, $color-options);
+@include A(define, 'fillAlpha', --fill-alpha, $color-alpha-adjectives, $color-options);
+@include A(define, 'strokeAlpha', --stroke-alpha, $color-alpha-adjectives, $color-options);
+
+// Create color ajectives map
+@function color-adjectives($alpha-var) {
+  $result: (
+    'transparent': transparent,
+
+    'black': rgba(0, 0, 0, var(--#{$alpha-var})),
+    'white': rgba(255, 255, 255, var(--#{$alpha-var})),
+
+    'light': rgba($light, var(--#{$alpha-var})),
+    'lightBg': rgba($light-bg, var(--#{$alpha-var})),
+    'lightMg': rgba($light-mg, var(--#{$alpha-var})),
+    'lightFg': rgba($light-fg, var(--#{$alpha-var})),
+
+    'dark': rgba($dark, var(--#{$alpha-var})),
+    'darkBg': rgba($dark-bg, var(--#{$alpha-var})),
+    'darkMg': rgba($dark-mg, var(--#{$alpha-var})),
+    'darkFg': rgba($dark-fg, var(--#{$alpha-var})),
+
+    'orange': rgba($orange, var(--#{$alpha-var})),
+    'orangeBg': rgba($orange-bg, var(--#{$alpha-var})),
+    'orangeMg': rgba($orange-mg, var(--#{$alpha-var})),
+    'orangeFg': rgba($orange-fg, var(--#{$alpha-var})),
+
+    'red': rgba($red, var(--#{$alpha-var})),
+    'redBg': rgba($red-bg, var(--#{$alpha-var})),
+    'redMg': rgba($red-mg, var(--#{$alpha-var})),
+    'redFg': rgba($red-fg, var(--#{$alpha-var})),
+
+    'green': rgba($green, var(--#{$alpha-var})),
+    'greenBg': rgba($green-bg, var(--#{$alpha-var})),
+    'greenMg': rgba($green-mg, var(--#{$alpha-var})),
+    'greenFg': rgba($green-fg, var(--#{$alpha-var})),
+  );
+
+  @return $result;
+}
+
+// Define color properties
+@include A(define, 'color', color, color-adjectives(color-alpha), $color-options);
+@include A(define, 'backgroundColor', background-color, color-adjectives(background-color-alpha), $color-options);
+
+@include A(define, 'borderColor', border-color, color-adjectives(border-color-alpha), $color-options);
+@include A(define, 'borderLeftColor', border-left-color, color-adjectives(border-color-alpha), $color-options);
+@include A(define, 'borderTopColor', border-top-color, color-adjectives(border-color-alpha), $color-options);
+@include A(define, 'borderRightColor', border-right-color, color-adjectives(border-color-alpha), $color-options);
+@include A(define, 'borderBottomColor', border-bottom-color, color-adjectives(border-color-alpha), $color-options);
+
+@include A(define, 'fill', fill, color-adjectives(fill-alpha), $color-options);
+@include A(define, 'stroke', stroke, color-adjectives(stroke-alpha), $color-options);

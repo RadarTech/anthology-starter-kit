@@ -1,0 +1,7 @@
+$opacity-adjectives: (
+  'full': 1,
+  'mid': 0.5,
+  'low': 0.35,
+  '0': 0,
+);
+@include A(define, 'opacity', opacity, $opacity-adjectives, ( pseudos: ':hover' ));

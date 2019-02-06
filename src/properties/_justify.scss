@@ -1,0 +1,16 @@
+$justify-adjectives: (
+  'start': flex-start,
+  'end': flex-end,
+  'left': left,
+  'center': center,
+  'right': right,
+  'top': left,
+  'middle': center,
+  'bottom': right,
+  'spaceBetween': space-between,
+  'spaceAround': space-around,
+);
+
+@include A(define, 'justifyItems', justify-items, $justify-adjectives);
+@include A(define, 'justifySelf', justify-self, $justify-adjectives);
+@include A(define, 'justifyContent', justify-content, $justify-adjectives);

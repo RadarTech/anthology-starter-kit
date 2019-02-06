@@ -1,0 +1,13 @@
+$z-index-adjectives: (
+  '0': 0
+);
+
+// Enter values for -100, -200, -300, ..., -1000 AND 100, 200, 300, ..., 1000
+@for $i from 0 to 1001 {
+  @if $i % 100 == 0 {
+    $z-index-adjectives: A(map-set, $z-index-adjectives, 'neg#{$i}', -$i);
+    $z-index-adjectives: A(map-set, $z-index-adjectives, $i, $i);
+  }
+}
+
+@include A(define, 'zIndex', z-index, $z-index-adjectives);

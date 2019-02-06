@@ -1,0 +1,38 @@
+// --- flex --- //
+$flex-adjectives: ();
+
+@for $i from 0 through 5 {
+  $flex-adjectives: map-merge($flex-adjectives, ($i: $i));
+}
+
+@include A(define, 'flex', flex, $flex-adjectives);
+@include A(define, 'flexGrow', flex-grow, $flex-adjectives);
+@include A(define, 'flexShrink', flex-shrink, $flex-adjectives);
+
+// --- flex-direction --- //
+$flex-direction-adjectives: (
+  'row': row,
+  'column': column,
+);
+@include A(define, 'flexDirection', flex-direction, $flex-direction-adjectives);
+
+// --- flex-basis --- //
+$flex-basis-adjectives: (
+  'content': content,
+  'auto': auto,
+);
+
+@for $i from 0 through 100 {
+  @if $i % 5 == 0 {
+    $flex-basis-adjectives: map-merge($flex-basis-adjectives, ($i: $i * 1%));
+  }
+}
+@include A(define, 'flexBasis', flex-basis, $flex-basis-adjectives);
+
+// --- flex-wrap --- //
+$flex-wrap-adjectives: (
+  'wrap': wrap,
+  'nowrap': nowrap,
+  'wrapReverse': wrap-reverse
+);
+@include A(define, 'flexWrap', flex-wrap, $flex-wrap-adjectives);

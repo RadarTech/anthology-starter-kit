@@ -1,0 +1,13 @@
+$align-adjectives: (
+  'start': flex-start,
+  'center': center,
+  'end': flex-end,
+  'top': flex-start,
+  'middle': center,
+  'bottom': flex-end,
+  'stretch': stretch,
+);
+
+@include A(define, 'alignSelf', align-self, $align-adjectives);
+@include A(define, 'alignItems', align-items, $align-adjectives);
+@include A(define, 'alignContent', align-content, $align-adjectives);

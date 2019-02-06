@@ -1,0 +1,3 @@
+# 💅 Anthology Starter Kit
+
+README in progress...

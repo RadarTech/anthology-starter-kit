@@ -1,0 +1,43 @@
+// --- Breakpoints --- //
+
+$tablet: 768px;
+$desktop: 1140px;
+$widescreen: 1280px;
+$fullhd: 1620px;
+
+$breakpoints: (
+  'tablet': $tablet,
+  'desktop': $desktop,
+  'widescreen': $widescreen,
+  'fullhd': $fullhd,
+);
+
+// --- Colors --- //
+
+$black:     #000000 !default;
+$white:     #ffffff !default;
+
+$light-bg:  #a5a5a5 !default;
+$light-mg:  #dadada !default;
+$light:     #f0f0f0 !default;
+$light-fg:  #ffffff !default;
+
+$dark-bg:   #000000 !default;
+$dark-mg:   #282828 !default;
+$dark:      #303030 !default;
+$dark-fg:   #484848 !default;
+
+$orange-bg: #dd5e17 !default;
+$orange-mg: #f58912 !default;
+$orange:    #ff9810 !default;
+$orange-fg: #ffac15 !default;
+
+$red-bg:    #bf1717 !default;
+$red-mg:    #df2525 !default;
+$red:       #ff3333 !default;
+$red-fg:    #ff525e !default;
+
+$green-bg:  #0d8c61 !default;
+$green-mg:  #26d986 !default;
+$green:     #33ff99 !default;
+$green-fg:  #a6ffbf !default;

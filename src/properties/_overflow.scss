@@ -1,0 +1,9 @@
+$overflow-adjectives: (
+  'hidden': hidden,
+  'scroll': scroll,
+  'visible': visible,
+);
+
+@include A(define, 'overflow', overflow, $overflow-adjectives);
+@include A(define, 'overflowX', overflow-x, $overflow-adjectives);
+@include A(define, 'overflowY', overflow-y, $overflow-adjectives);

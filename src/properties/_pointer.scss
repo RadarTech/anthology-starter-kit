@@ -1,0 +1,12 @@
+$cursor-adjectives: (
+  'default': default,
+  'pointer': pointer,
+  'notAllowed': not-allowed,
+);
+@include A(define, 'cursor', cursor, $cursor-adjectives);
+
+$pointer-events-adjectives: (
+  'none': none,
+  'all': all,
+);
+@include A(define, 'pointerEvents', pointer-events, $pointer-events-adjectives);
