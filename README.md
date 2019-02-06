@@ -1,4 +1,4 @@
-# 💅 Anthology Starter Kit
+# 🎨 Anthology Starter Kit
 
 > A boilerplate to get started quickly with Anthology.scss. Fork it and grow it with your brand!
 
