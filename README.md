@@ -5,7 +5,7 @@
 <p align="center">
   <a href="https://www.anthology.style">📚 Anthology documentation</a>
   <span> · </span>
-  <a href="https://github.com/RadarTech/anthology.scss">Anthology source</a>
+  <a href="https://github.com/RadarTech/anthology.scss">🚀 Anthology source</a>
 </p>
 
 ---
