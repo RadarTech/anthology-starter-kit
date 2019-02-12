@@ -14,5 +14,11 @@
 
 1. Fork it!
 2. Add or remove CSS properties from `src/properties/*.scss`
-3. Import into your project! `@import 'path/to/my/anthology/main.scss`
+3. Import into your project! `@import 'path/to/my/anthology/main.scss';`
+4. Become an expert with Anthology's [bevy of mixins and functions!](https://www.anthology.style/basics/getting-started)
+
+\~or\~
+
+1. Install the NPM package with `npm install @anthology/starter-kit` or `yarn add @anthology/starter-kit`
+2. Import into your project! `@import './node_modules/@anthology/starter-kit/src/main.scss';`
 4. Become an expert with Anthology's [bevy of mixins and functions!](https://www.anthology.style/basics/getting-started)
